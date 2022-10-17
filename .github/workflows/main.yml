@@ -37,7 +37,7 @@ jobs:
         uses: erlef/setup-beam@v1
         with:
           otp-version: "25"
-          elixir-version: "1.13"
+          elixir-version: "1.14"
 
       - name: Check cargo fmt
         uses: actions-rs/cargo@v1
@@ -67,8 +67,8 @@ jobs:
       - name: Install Erlang/Elixir
         uses: erlef/setup-beam@v1
         with:
-          otp-version: "24.1.7"
-          elixir-version: 1.13
+          otp-version: "25"
+          elixir-version: 1.14
 
       - name: Test rustler_mix
         working-directory: rustler_mix
@@ -80,11 +80,7 @@ jobs:
     strategy:
       matrix:
         pair:
-          - { erlang: "25", elixir: "1.13" }
-          - { erlang: "24", elixir: "1.13" }
-          - { erlang: "24", elixir: "1.12" }
-          - { erlang: "24", elixir: "1.11" }
-          - { erlang: "23", elixir: "1.11" }
+          - { erlang: "25", elixir: "1.14" }
         rust:
           - stable
           - beta
