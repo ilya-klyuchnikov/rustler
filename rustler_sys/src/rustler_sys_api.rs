@@ -4,7 +4,7 @@
 #[cfg(windows)]
 use unreachable::UncheckedOptionExt; // unchecked unwrap used in generated Windows code
 
-pub use std::os::raw::{c_char, c_double, c_int, c_long, c_uchar, c_uint, c_ulong, c_void};
+pub use std::ffi::{c_char, c_double, c_int, c_long, c_uchar, c_uint, c_ulong, c_void};
 
 use std::os;
 
